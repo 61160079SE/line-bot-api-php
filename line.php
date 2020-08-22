@@ -22,8 +22,11 @@ if ( sizeof($request_array['events']) > 0 )
    {
 		$text = $event['message']['text'];
 		
-		$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!';   
-   }
+	   	if($text == "หิวข้าว"){
+			$reply_message = 'กูก็หิวไอสัส!!';
+		}else{
+			$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!'; 
+   		}
    else
     $reply_message = 'ระบบได้รับ '.ucfirst($event['message']['type']).' ของคุณแล้ว';
   
