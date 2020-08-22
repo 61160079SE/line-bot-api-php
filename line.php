@@ -27,6 +27,9 @@ if ( sizeof($request_array['events']) > 0 )
 		}else if($text == "อยากลาออก"){
 			$reply_message = 'ออกเลย!!';
 		}
+	  	else if($text == "ชื่ออะไร"){
+			$reply_message = 'ไม่บอก';
+		}
 	   	else{
 			$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!'; 
    		}
