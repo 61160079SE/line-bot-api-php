@@ -48,7 +48,7 @@ if ( sizeof($request_array['events']) > 0 )
 	   else if(strpos($text, 'ล้ำ') !== false){
 			$reply_message = 'แน่นอน';
 		}
-	   else if(strpos($text, 'เคร') !== false || strpos($text, 'โอเคร') !== false || strpos($text, 'โอเค') !== false)){
+	   else if(strpos($text, 'เคร') !== false || strpos($text, 'โอเคร') !== false || strpos($text, 'โอเค') !== false){
 			$reply_message = 'โอเค';
 		}
 	   else if($text == 'หนุกดีครับ'){
