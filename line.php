@@ -60,12 +60,18 @@ if ( sizeof($request_array['events']) > 0 )
 	   else if(strpos($text, 'อาหาร') !== false){
 			$reply_message = 'ผมก็หิว';
 		}
+	   else if(strpos($text, 'รำคาญ') !== false || strpos($text, 'ไม่ชอบ') !== false || strpos($text, 'แย่') !== false || strpos($text, 'ไม่ดี') !== false){
+			$reply_message = 'เดียวก็ชินฮับ';
+		}
 	  
 	   	else if(strpos($text, 'ใคร') !== false && strpos($text, 'ผู้พัฒนา') !== false){
 			$reply_message = 'อดิเทพ-079 ครับ !!';
 		}
 	  	else if(strpos($text, 'ชื่ออะไร') !== false || strpos($text, 'ชื่อว่าอะไร') !== false){
 			$reply_message = 'อดิเทพ-079 ครับ !!';
+		}
+	   	else if(strpos($text, 'บอท') !== false || strpos($text, 'bot') !== false){
+			$reply_message = 'ผมเหรอ?';
 		}
 	   	else{
 			//$reply_message = '('.$text.') ได้รับข้อความเรียบร้อยครับ'; 
