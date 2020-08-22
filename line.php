@@ -60,6 +60,9 @@ if ( sizeof($request_array['events']) > 0 )
 	   	else if(strpos($text, 'เกินไปแล้ว') !== false){
 			$reply_message = 'ใช่เลย ๆ';
 		}
+	   else if(strpos($text, '555') !== false){
+			$reply_message = '55555';
+		}
 	   else if(strpos($text, 'bug') !== false){
 			$reply_message = 'คิดไปเองครับ';
 		}
