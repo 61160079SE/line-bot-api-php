@@ -46,7 +46,10 @@ if ( sizeof($request_array['events']) > 0 )
 			$reply_message = 'สวัสดีฮับ';
 		}
 	   else if(strpos($text, 'ิbot ผมล้ำใช่ไหมครับ') !== false){
-			$reply_message = '555555';
+			$reply_message = 'แน่นอน';
+		}
+	   else if($text == 'หนุกดีครับ'){
+			$reply_message = '5555';
 		}
 	   	else if(strpos($text, 'คำถามล้ำถามไปแล้วครับ!!') !== false){
 			$reply_message = 'ใช่เลย ๆ';
@@ -57,6 +60,7 @@ if ( sizeof($request_array['events']) > 0 )
 	   else if(strpos($text, 'คืออะไร') !== false){
 			$reply_message = 'ไม่รู้สิ';
 		}
+	  
 	   	else if(strpos($text, 'ใคร') !== false && strpos($text, 'ผู้พัฒนา') !== false){
 			$reply_message = 'อดิเทพ-079 ครับ !!';
 		}
@@ -65,7 +69,7 @@ if ( sizeof($request_array['events']) > 0 )
 		}
 	   	else{
 			//$reply_message = '('.$text.') ได้รับข้อความเรียบร้อยครับ'; 
-			$reply_message = 'search ใน google ฮับอิอิ'; 
+			$reply_message = 'ไม่รู้สิฮับ อิอิ'; 
    		}
 	   
    }else
