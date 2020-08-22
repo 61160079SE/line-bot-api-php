@@ -54,8 +54,8 @@ if ( sizeof($request_array['events']) > 0 )
 	   else if($text == 'หนุกดีครับ'){
 			$reply_message = '5555';
 		}
-	   else if($text == 'ดี'){
-			$reply_message = 'ดีครับ';
+	   else if(strpos($text, 'ดี') !== false){
+			$reply_message = 'ดี ๆ';
 		}
 	   	else if(strpos($text, 'เกินไปแล้ว') !== false){
 			$reply_message = 'ใช่เลย ๆ';
