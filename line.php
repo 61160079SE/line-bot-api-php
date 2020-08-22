@@ -48,6 +48,9 @@ if ( sizeof($request_array['events']) > 0 )
 	   else if(strpos($text, 'ล้ำ') !== false){
 			$reply_message = 'แน่นอน';
 		}
+	   else if(strpos($text, 'แนะนำ') !== false){
+			$reply_message = 'search google จะดีกว่านะครับ';
+		}
 	   else if(strpos($text, 'เคร') !== false || strpos($text, 'โอเคร') !== false || strpos($text, 'โอเค') !== false){
 			$reply_message = 'โอเค';
 		}
