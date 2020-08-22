@@ -42,8 +42,11 @@ if ( sizeof($request_array['events']) > 0 )
 		}
 	   	else if($text == "หิวข้าว"){
 			$reply_message = 'ผมก็หิวนะ!!';
-		}else if($text == "อยากลาออก"){
-			$reply_message = 'ออกเลย!!';
+		}else if(strpos($text, 'สวัสดี') !== false){
+			$reply_message = 'สวัสดีฮับ';
+		}
+	   	else if(strpos($text, 'ใคร') !== false && strpos($text, 'ผู้พัฒนา') !== false){
+			$reply_message = 'อดิเทพ-079 ครับ !!';
 		}
 	  	else if(strpos($text, 'ชื่ออะไร') !== false || strpos($text, 'ชื่อว่าอะไร') !== false){
 			$reply_message = 'อดิเทพ-079 ครับ !!';
