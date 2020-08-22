@@ -45,7 +45,7 @@ if ( sizeof($request_array['events']) > 0 )
 		}else if($text == "อยากลาออก"){
 			$reply_message = 'ออกเลย!!';
 		}
-	  	else if(strpos($text, 'ชื่ออะไร') !== false){
+	  	else if(strpos($text, 'ชื่ออะไร') !== false || strpos($text, 'ชื่อว่าอะไร') !== false){
 			$reply_message = 'ไม่บอก!!';
 		}
 	   	else{
