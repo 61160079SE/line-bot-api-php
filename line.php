@@ -27,7 +27,7 @@ if ( sizeof($request_array['events']) > 0 )
 		}else{
 			$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!'; 
    		}
-   else
+   }else
     $reply_message = 'ระบบได้รับ '.ucfirst($event['message']['type']).' ของคุณแล้ว';
   
   }
