@@ -51,14 +51,14 @@ if ( sizeof($request_array['events']) > 0 )
 	   else if($text == 'หนุกดีครับ'){
 			$reply_message = '5555';
 		}
-	   	else if(strpos($text, 'คำถามล้ำถามไปแล้วครับ!!') !== false){
+	   	else if(strpos($text, 'เกินไปแล้ว') !== false){
 			$reply_message = 'ใช่เลย ๆ';
 		}
 	   else if(strpos($text, 'bug') !== false){
 			$reply_message = 'คิดไปเองครับ';
 		}
-	   else if(strpos($text, 'คืออะไร') !== false){
-			$reply_message = 'ไม่รู้สิ';
+	   else if(strpos($text, 'อาหาร') !== false){
+			$reply_message = 'ผมก็หิว';
 		}
 	  
 	   	else if(strpos($text, 'ใคร') !== false && strpos($text, 'ผู้พัฒนา') !== false){
