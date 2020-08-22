@@ -37,19 +37,19 @@ if ( sizeof($request_array['events']) > 0 )
 		     $obj = json_decode($result);
 
 		     $reply_message = $result;
-		     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}.' คน <br> รักษาหายแล้ว '. $obj->{'Recovered'}.' คน';
+		     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}.' คน'. PHP_EOL .'รักษาหายแล้ว '. $obj->{'Recovered'}.' คน';
 			
 		}
 	   	else if($text == "หิวข้าว"){
-			$reply_message = 'กูก็หิวนะ!!';
+			$reply_message = 'ผมก็หิวนะ!!';
 		}else if($text == "อยากลาออก"){
 			$reply_message = 'ออกเลย!!';
 		}
 	  	else if(strpos($text, 'ชื่ออะไร') !== false || strpos($text, 'ชื่อว่าอะไร') !== false){
-			$reply_message = 'ไม่บอก!!';
+			$reply_message = 'อดิเทพ-079 ครับ !!';
 		}
 	   	else{
-			$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!'; 
+			$reply_message = '('.$text.') ได้รับข้อความเรียบร้อยครับ'; 
    		}
 	   
    }else
