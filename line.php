@@ -40,8 +40,8 @@ if ( sizeof($request_array['events']) > 0 )
 		     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}.' คน'. PHP_EOL .'รักษาหายแล้ว '. $obj->{'Recovered'}.' คน';
 			
 		}
-	   	else if($text == "หิวข้าว"){
-			$reply_message = 'ผมก็หิวนะ!!';
+	   	else if($text == "ผมไป train bot มาแล้วครับ"){
+			$reply_message = 'ถามใหม่ได้เลย!!';
 		}else if(strpos($text, 'สวัสดี') !== false){
 			$reply_message = 'สวัสดีฮับ';
 		}
