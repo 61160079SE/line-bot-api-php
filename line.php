@@ -37,7 +37,9 @@ if ( sizeof($request_array['events']) > 0 )
 		     $obj = json_decode($result);
 
 		     $reply_message = $result;
-		     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}.'คน';
+		     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}.' คน';
+			$reply_message += '<br> รักษาหายแล้ว '. $obj->{'Recovered'}.' คน';
+			
 		}
 	   	else if($text == "หิวข้าว"){
 			$reply_message = 'กูก็หิวไอสัส!!';
@@ -45,7 +47,7 @@ if ( sizeof($request_array['events']) > 0 )
 			$reply_message = 'ออกเลย!!';
 		}
 	  	else if($text == "ชื่ออะไร"){
-			$reply_message = 'ไม่บอก';
+			$reply_message = 'กูไม่บอก!!';
 		}
 	   	else{
 			$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!'; 
