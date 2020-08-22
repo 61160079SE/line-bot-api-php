@@ -41,12 +41,12 @@ if ( sizeof($request_array['events']) > 0 )
 			
 		}
 	   	else if($text == "หิวข้าว"){
-			$reply_message = 'กูก็หิวไอสัส!!';
+			$reply_message = 'กูก็หิวนะ!!';
 		}else if($text == "อยากลาออก"){
 			$reply_message = 'ออกเลย!!';
 		}
-	  	else if($text == "ชื่ออะไร"){
-			$reply_message = 'กูไม่บอก!!';
+	  	else if(strpos($text, 'ชื่ออะไร') !== false){
+			$reply_message = 'ไม่บอก!!';
 		}
 	   	else{
 			$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!'; 
