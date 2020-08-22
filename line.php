@@ -55,7 +55,8 @@ if ( sizeof($request_array['events']) > 0 )
 			$reply_message = 'อดิเทพ-079 ครับ !!';
 		}
 	   	else{
-			$reply_message = '('.$text.') ได้รับข้อความเรียบร้อยครับ'; 
+			//$reply_message = '('.$text.') ได้รับข้อความเรียบร้อยครับ'; 
+			$reply_message = 'search ใน google ฮับอิอิ'; 
    		}
 	   
    }else
