@@ -24,7 +24,10 @@ if ( sizeof($request_array['events']) > 0 )
 		
 	   	if($text == "หิวข้าว"){
 			$reply_message = 'กูก็หิวไอสัส!!';
-		}else{
+		}else if($text == "อยากลาออก"){
+			$reply_message = 'ออกเลย!!';
+		}
+	   	else{
 			$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!'; 
    		}
    }else
