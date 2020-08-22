@@ -45,6 +45,9 @@ if ( sizeof($request_array['events']) > 0 )
 		}else if(strpos($text, 'สวัสดี') !== false){
 			$reply_message = 'สวัสดีฮับ';
 		}
+	   else if(strpos($text, 'ิbot ผมล้ำใช่ไหมครับ') !== false){
+			$reply_message = '555555';
+		}
 	   	else if(strpos($text, 'คำถามล้ำถามไปแล้วครับ!!') !== false){
 			$reply_message = 'ใช่เลย ๆ';
 		}
