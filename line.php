@@ -22,75 +22,78 @@ if ( sizeof($request_array['events']) > 0 )
    {
 		$text = $event['message']['text'];
 		
-	   
-	    	if($text == "สถานการณ์โควิดวันนี้" || $text == "covid19" || $text == "covid-19" || $text == "Covid-19"){
-		     $url = 'https://covid19.th-stat.com/api/open/today';
-		     $ch = curl_init($url);
-		     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-		     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		     curl_setopt($ch, CURLOPT_HTTPHEADER, $post_header);
-		     curl_setopt($ch, CURLOPT_POSTFIELDS, $post_body);
-		     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-		     $result = curl_exec($ch);
-		     curl_close($ch);   
+	   	
+	   	if(strpos($text, '@bot') !== false){
 
-		     $obj = json_decode($result);
+			if($text == "สถานการณ์โควิดวันนี้" || $text == "covid19" || $text == "covid-19" || $text == "Covid-19"){
+			     $url = 'https://covid19.th-stat.com/api/open/today';
+			     $ch = curl_init($url);
+			     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			     curl_setopt($ch, CURLOPT_HTTPHEADER, $post_header);
+			     curl_setopt($ch, CURLOPT_POSTFIELDS, $post_body);
+			     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			     $result = curl_exec($ch);
+			     curl_close($ch);   
 
-		     $reply_message = $result;
-		     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}.' คน'. PHP_EOL .'รักษาหายแล้ว '. $obj->{'Recovered'}.' คน';
-			
-		}
-	   	else if($text == "ผมไป train bot มาแล้วครับ"){
-			$reply_message = 'ถามใหม่ได้เลย!!';
-		}else if($text == "CDMA"){
-			$reply_message = '+1,-3,-1,-1';
-		}else if(strpos($text, 'สวัสดี') !== false){
-			$reply_message = 'สวัสดีฮับ';
-		}
-	   	else if(strpos($text, 'ล้ำ') !== false){
-			$reply_message = 'แน่นอน';
-		}
-	   	else if(strpos($text, 'แนะนำ') !== false){
-			$reply_message = 'search google จะดีกว่านะครับ';
-		}
-	   	else if(strpos($text, 'เคร') !== false || strpos($text, 'โอเคร') !== false || strpos($text, 'โอเค') !== false){
-			$reply_message = 'โอเค';
-		}
-	   	else if($text == 'หนุกดีครับ'){
-			$reply_message = '5555';
-		}
-	   	else if(strpos($text, 'ดี') !== false){
-			$reply_message = 'ดี ๆ';
-		}
-	   	else if(strpos($text, 'เกินไปแล้ว') !== false){
-			$reply_message = 'ใช่เลย ๆ';
-		}
-	   	else if(strpos($text, '555') !== false){
-			$reply_message = '55555';
-		}
-	   	else if(strpos($text, 'bug') !== false){
-			$reply_message = 'คิดไปเองครับ';
-		}
-	   	else if(strpos($text, 'อาหาร') !== false){
-			$reply_message = 'ผมก็หิว';
-		}
-	   	else if(strpos($text, 'รำคาญ') !== false || strpos($text, 'ไม่ชอบ') !== false || strpos($text, 'แย่') !== false || strpos($text, 'ไม่ดี') !== false){
-			$reply_message = 'เดียวก็ชินฮับ';
-		}
-	  
-	   	else if(strpos($text, 'ใคร') !== false && strpos($text, 'ผู้พัฒนา') !== false){
-			$reply_message = 'อดิเทพ-079 ครับ !!';
-		}
-	  	else if(strpos($text, 'ชื่ออะไร') !== false || strpos($text, 'ชื่อว่าอะไร') !== false){
-			$reply_message = 'อดิเทพ-079 ครับ !!';
-		}
-	   	else if(strpos($text, 'บอท') !== false || strpos($text, 'bot') !== false){
-			$reply_message = 'ผมเหรอ?';
-		}
-	   	else{
-			//$reply_message = '('.$text.') ได้รับข้อความเรียบร้อยครับ'; 
-			$reply_message = 'ไม่รู้สิฮับ อิอิ'; 
-   		}
+			     $obj = json_decode($result);
+
+			     $reply_message = $result;
+			     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}.' คน'. PHP_EOL .'รักษาหายแล้ว '. $obj->{'Recovered'}.' คน';
+
+			}
+			else if($text == "ผมไป train bot มาแล้วครับ"){
+				$reply_message = 'ถามใหม่ได้เลย!!';
+			}else if($text == "CDMA"){
+				$reply_message = '+1,-3,-1,-1';
+			}else if(strpos($text, 'สวัสดี') !== false){
+				$reply_message = 'สวัสดีฮับ';
+			}
+			else if(strpos($text, 'ล้ำ') !== false){
+				$reply_message = 'แน่นอน';
+			}
+			else if(strpos($text, 'แนะนำ') !== false){
+				$reply_message = 'search google จะดีกว่านะครับ';
+			}
+			else if(strpos($text, 'เคร') !== false || strpos($text, 'โอเคร') !== false || strpos($text, 'โอเค') !== false){
+				$reply_message = 'โอเค';
+			}
+			else if($text == 'หนุกดีครับ'){
+				$reply_message = '5555';
+			}
+			else if(strpos($text, 'ดี') !== false){
+				$reply_message = 'ดี ๆ';
+			}
+			else if(strpos($text, 'เกินไปแล้ว') !== false){
+				$reply_message = 'ใช่เลย ๆ';
+			}
+			else if(strpos($text, '555') !== false){
+				$reply_message = '55555';
+			}
+			else if(strpos($text, 'bug') !== false){
+				$reply_message = 'คิดไปเองครับ';
+			}
+			else if(strpos($text, 'อาหาร') !== false){
+				$reply_message = 'ผมก็หิว';
+			}
+			else if(strpos($text, 'รำคาญ') !== false || strpos($text, 'ไม่ชอบ') !== false || strpos($text, 'แย่') !== false || strpos($text, 'ไม่ดี') !== false){
+				$reply_message = 'เดียวก็ชินฮับ';
+			}
+
+			else if(strpos($text, 'ใคร') !== false && strpos($text, 'ผู้พัฒนา') !== false){
+				$reply_message = 'อดิเทพ-079 ครับ !!';
+			}
+			else if(strpos($text, 'ชื่ออะไร') !== false || strpos($text, 'ชื่อว่าอะไร') !== false){
+				$reply_message = 'อดิเทพ-079 ครับ !!';
+			}
+			else if(strpos($text, 'บอท') !== false || strpos($text, 'bot') !== false){
+				$reply_message = 'ผมเหรอ?';
+			}
+			else{
+				//$reply_message = '('.$text.') ได้รับข้อความเรียบร้อยครับ'; 
+				$reply_message = 'ไม่รู้สิฮับ อิอิ'; 
+			}
+		}//else
 	   
    }else
     $reply_message = 'ระบบได้รับ '.ucfirst($event['message']['type']).' ของคุณแล้ว';
