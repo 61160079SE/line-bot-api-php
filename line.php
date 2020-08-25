@@ -40,10 +40,10 @@ if ( sizeof($request_array['events']) > 0 )
 		     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}.' คน'. PHP_EOL .'รักษาหายแล้ว '. $obj->{'Recovered'}.' คน';
 			
 		}
-	   	else if($text == "CDMA"){
+	   	else if($text == "ผมไป train bot มาแล้วครับ"){
 			$reply_message = 'ถามใหม่ได้เลย!!';
-		}else if($text == "1,-3,-1,-1"){
-			$reply_message = 'ถามใหม่ได้เลย!!';
+		}else if($text == "CDMA"){
+			$reply_message = '1,-3,-1,-1';
 		}else if(strpos($text, 'สวัสดี') !== false){
 			$reply_message = 'สวัสดีฮับ';
 		}
