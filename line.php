@@ -42,39 +42,39 @@ if ( sizeof($request_array['events']) > 0 )
 		}
 	   	else if($text == "CDMA"){
 			$reply_message = 'ถามใหม่ได้เลย!!';
-	   	else if($text == "1,-3,-1,-1"){
+		}else if($text == "1,-3,-1,-1"){
 			$reply_message = 'ถามใหม่ได้เลย!!';
 		}else if(strpos($text, 'สวัสดี') !== false){
 			$reply_message = 'สวัสดีฮับ';
 		}
-	   else if(strpos($text, 'ล้ำ') !== false){
+	   	else if(strpos($text, 'ล้ำ') !== false){
 			$reply_message = 'แน่นอน';
 		}
-	   else if(strpos($text, 'แนะนำ') !== false){
+	   	else if(strpos($text, 'แนะนำ') !== false){
 			$reply_message = 'search google จะดีกว่านะครับ';
 		}
-	   else if(strpos($text, 'เคร') !== false || strpos($text, 'โอเคร') !== false || strpos($text, 'โอเค') !== false){
+	   	else if(strpos($text, 'เคร') !== false || strpos($text, 'โอเคร') !== false || strpos($text, 'โอเค') !== false){
 			$reply_message = 'โอเค';
 		}
-	   else if($text == 'หนุกดีครับ'){
+	   	else if($text == 'หนุกดีครับ'){
 			$reply_message = '5555';
 		}
-	   else if(strpos($text, 'ดี') !== false){
+	   	else if(strpos($text, 'ดี') !== false){
 			$reply_message = 'ดี ๆ';
 		}
 	   	else if(strpos($text, 'เกินไปแล้ว') !== false){
 			$reply_message = 'ใช่เลย ๆ';
 		}
-	   else if(strpos($text, '555') !== false){
+	   	else if(strpos($text, '555') !== false){
 			$reply_message = '55555';
 		}
-	   else if(strpos($text, 'bug') !== false){
+	   	else if(strpos($text, 'bug') !== false){
 			$reply_message = 'คิดไปเองครับ';
 		}
-	   else if(strpos($text, 'อาหาร') !== false){
+	   	else if(strpos($text, 'อาหาร') !== false){
 			$reply_message = 'ผมก็หิว';
 		}
-	   else if(strpos($text, 'รำคาญ') !== false || strpos($text, 'ไม่ชอบ') !== false || strpos($text, 'แย่') !== false || strpos($text, 'ไม่ดี') !== false){
+	   	else if(strpos($text, 'รำคาญ') !== false || strpos($text, 'ไม่ชอบ') !== false || strpos($text, 'แย่') !== false || strpos($text, 'ไม่ดี') !== false){
 			$reply_message = 'เดียวก็ชินฮับ';
 		}
 	  
