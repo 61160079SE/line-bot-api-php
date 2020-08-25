@@ -23,7 +23,7 @@ if ( sizeof($request_array['events']) > 0 )
 		$text = $event['message']['text'];
 		
 	   	
-	   	if(strpos($text, '@bot') !== false || strpos($text, '@บอท') !== false){
+	   	//if(strpos($text, '@bot') !== false || strpos($text, '@บอท') !== false){
 
 			if($text == "สถานการณ์โควิดวันนี้" || $text == "covid19" || $text == "covid-19" || $text == "Covid-19"){
 			     $url = 'https://covid19.th-stat.com/api/open/today';
@@ -134,7 +134,7 @@ if ( sizeof($request_array['events']) > 0 )
 				//$reply_message = '('.$text.') ได้รับข้อความเรียบร้อยครับ'; 
 				$reply_message = 'ไม่รู้สิฮับ อิอิ'; 
 			}
-		}//else
+		//}//if
 	   
    }else
     $reply_message = 'ระบบได้รับ '.ucfirst($event['message']['type']).' ของคุณแล้ว';
