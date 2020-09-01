@@ -82,7 +82,7 @@ if ( sizeof($request_array['events']) > 0 )
 // 			}
 			
 			
-			else if($text == "@บอท ขอรหัสนิสิตของผู้พัฒนา ส่งไปที่ https://linebot.kantit.com/stuid.p"){
+			else if($text == "@บอท ขอรหัสนิสิตของผู้พัฒนา ส่งไปที่ https://linebot.kantit.com/stuid.php"){
 				$reply_message = 'ok!';
 			}
 			
